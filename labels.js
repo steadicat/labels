@@ -24,28 +24,31 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 (function($) {
     function toggleLabel() {
-        var def = $(this).attr('title');
-        if (!$(this).val() || ($(this).val() == def)) {
-            $(this).prev('label').css('visibility', '');
+        var input = this;
+        setTimeout(function() {
+        var def = $(input).attr('title');
+        if (!$(input).val() || ($(input).val() == def)) {
+            $(input).prev('span').css('visibility', '');
             if (def) {
                 var dummy = $('<label></label>').text(def).css('visibility','hidden').appendTo('body');
-                $(this).prev('label').css('margin-left', dummy.width() + 3 + 'px');
+                $(input).prev('span').css('margin-left', dummy.width() + 3 + 'px');
                 dummy.remove();
             }
         } else {
-            $(this).prev('label').css('visibility', 'hidden');
+            $(input).prev('span').css('visibility', 'hidden');
         }
+        }, 0);
     };
 
     function resetField() {
         var def = $(this).attr('title');
         if (!$(this).val() || ($(this).val() == def)) {
             $(this).val(def);
-            $(this).prev('label').css('visibility', '');
+            $(this).prev('span').css('visibility', '');
         }
     };
 
-    $('input, textarea').live('keyup', toggleLabel);
+    $('input, textarea').live('keydown', toggleLabel);
     $('select').live('change', toggleLabel);
 
     $(function() {
