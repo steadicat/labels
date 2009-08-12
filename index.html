@@ -58,10 +58,10 @@
 
     <p>This is one of the best ways to place labels inside input fields, like so:</p>
 
-    <div class="input">
-      <label for="email0">Email address</label>
-      <input type="text" id="email0" />
-    </div>
+    <label class="input">
+      <span>Email address</span>
+      <input type="text" />
+    </label>
 
     <p>This version works by placing the label <strong>in front of the input field</strong>, so that the native styling of the control can be preserved. If you prefer, the previous version places labels <a href="../labels/">behind the input field</a>.</p>
 
@@ -79,54 +79,54 @@
 
     <div class="page" id="demo">
 
-    <div class="input">
-      <label for="email">Email address</label>
-      <input type="text" id="email" />
-    </div>
+    <label class="input">
+      <span>Email address</span>
+      <input type="text" />
+    </label>
 
-    <div class="input">
-      <label for="password">Password</label>
-      <input type="password" id="password" />
-    </div>
+    <label class="input">
+      <span>Password</span>
+      <input type="password" />
+    </label>
 
-    <div class="input">
-      <label for="email2">Email address</label>
-      <input type="text" id="email2" value="me@example.com" />
-    </div>
+    <label class="input">
+      <span>Email address</span>
+      <input type="text" value="me@example.com" />
+    </label>
 
-    <div class="input">
-      <label for="phone2">Phone number</label>
-      <input type="text" id="phone2" title="+358" value="+358" />
-    </div>
+    <label class="input">
+      <span>Phone number</span>
+      <input type="text" title="+358" value="+358" />
+    </label>
 
-    <div class="input">
-      <label for="phone">Phone number</label>
-      <input type="text" id="phone" title="+358" value="+358123456789" />
-    </div>
+    <label class="input">
+      <span>Phone number</span>
+      <input type="text" title="+358" value="+358123456789" />
+    </label>
 
-    <div class="input">
-      <label for="country">Country</label>
-      <select id="country">
+    <label class="input">
+      <span>Country</span>
+      <select>
         <option></option>
         <option>US</option>
         <option>Italy</option>
         <option>Finland</option>
         <option>The Netherlands</option>
       </select>
-    </div>
+    </label>
 
-    <div class="input">
-      <label for="comment">Your comment</label>
+    <label class="input">
+      <span>Your comment</span>
       <textarea id="comment" rows="3" cols="60"></textarea>
-    </div>
+    </label>
 
     </div>
 
     <pre class="sh_html loading page" id="html">
-&lt;div class="input"&gt;
-  &lt;label for="email"&gt;Email address&lt;/label&gt;
-  &lt;input type="text" id="email" title="default@example.com" /&gt;
-&lt;/div&gt;</pre>
+&lt;label class="input"&gt;
+    &lt;span&gt;Email address&lt;/span&gt;
+    &lt;input type="text" /&gt;
+&lt;/label&gt;</pre>
     <pre class="sh_css loading page" id="css"></pre>
     <pre class="sh_javascript loading page" id="javascript"></pre>
 

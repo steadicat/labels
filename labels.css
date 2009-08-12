@@ -1,4 +1,7 @@
-label {
+.input {
+  display: block;
+}
+.input span {
   position: absolute;
   padding: 5px;
   margin-left: 3px;
@@ -6,15 +9,13 @@ label {
   z-index: 1;
   cursor: text;
 }
-input, textarea, select {
+.input input, .input textarea, .input select {
   z-index: 0;
   padding: 6px;
   margin: 0;
-}
-input, textarea, select, label {
   font: inherit;
 }
 /* Hack to remove Safari's extra padding. Remove if you don't care about pixel-perfection. */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-    input, textarea, select { padding: 4px; }
+    .input input, .input textarea, .input select { padding: 4px; }
 }

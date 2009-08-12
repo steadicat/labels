@@ -26,14 +26,14 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     function toggleLabel() {
         var def = $(this).attr('title');
         if (!$(this).val() || ($(this).val() == def)) {
-            $(this).prev('label').css('visibility', '');
+            $(this).prev('span').css('visibility', '');
             if (def) {
                 var dummy = $('<label></label>').text(def).css('visibility','hidden').appendTo('body');
-                $(this).prev('label').css('margin-left', dummy.width() + 3 + 'px');
+                $(this).prev('span').css('margin-left', dummy.width() + 3 + 'px');
                 dummy.remove();
             }
         } else {
-            $(this).prev('label').css('visibility', 'hidden');
+            $(this).prev('span').css('visibility', 'hidden');
         }
     };
 
@@ -41,7 +41,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         var def = $(this).attr('title');
         if (!$(this).val() || ($(this).val() == def)) {
             $(this).val(def);
-            $(this).prev('label').css('visibility', '');
+            $(this).prev('span').css('visibility', '');
         }
     };
 
