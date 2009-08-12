@@ -1,15 +1,21 @@
+.input {
+  margin: 5px 0;
+  background: white;
+  float: left;
+  clear: both;
+}
 label {
   position: absolute;
   padding: 5px;
   margin-left: 3px;
   color: #999;
-  z-index: 1;
-  cursor: text;
 }
 input, textarea, select {
-  z-index: 0;
-  padding: 6px;
+  position: relative;
   margin: 0;
+  border-width: 1px;
+  padding: 6px;
+  background: transparent;
 }
 input, textarea, select, label {
   font: inherit;
@@ -18,3 +24,4 @@ input, textarea, select, label {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     input, textarea, select { padding: 4px; }
 }
+

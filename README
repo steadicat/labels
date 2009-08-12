@@ -1,6 +1,6 @@
 This is one of the best ways to place labels inside input fields.
 
-This version works by placing the label in front of the input field, so that the native styling of the control can be preserved. If you prefer, check the "behind" branch for labels behind the input field.
+This version works by placing the label behind the input field and making the input field transparent, so that the label will not intercept clicks. If you prefer to preserve the native styling of the controls, check the "master" branch for labels in front of the input field.
 
 The solution is based on simple HTML markup, some CSS styling, and a jQuery plugin. The license is MIT. Feedback (bugs, suggestions, compatibility reports) on Twitter: @steadicat.
 
