@@ -24,19 +24,19 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 (function($) {
     function toggleLabel() {
-        var input = this;
+        var input = $(this);
         setTimeout(function() {
-        var def = $(input).attr('title');
-        if (!$(input).val() || ($(input).val() == def)) {
-            $(input).prev('span').css('visibility', '');
-            if (def) {
-                var dummy = $('<label></label>').text(def).css('visibility','hidden').appendTo('body');
-                $(input).prev('span').css('margin-left', dummy.width() + 3 + 'px');
-                dummy.remove();
+            var def = input.attr('title');
+            if (!input.val() || (input.val() == def)) {
+                input.prev('span').css('visibility', '');
+                if (def) {
+                    var dummy = $('<label></label>').text(def).css('visibility','hidden').appendTo('body');
+                    input.prev('span').css('margin-left', dummy.width() + 3 + 'px');
+                    dummy.remove();
+                }
+            } else {
+                input.prev('span').css('visibility', 'hidden');
             }
-        } else {
-            $(input).prev('span').css('visibility', 'hidden');
-        }
         }, 0);
     };
 
@@ -51,9 +51,15 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     $('input, textarea').live('keydown', toggleLabel);
     $('select').live('change', toggleLabel);
 
+    $('input, textarea').live('focusin', function() {
+        $(this).prev('span').css('color', '#ccc');
+    });
+    $('input, textarea').live('focusout', function() {
+        $(this).prev('span').css('color', '#999');
+    });
+
     $(function() {
-        $('input, textarea').blur(resetField);
-        $('input, textarea').each(toggleLabel);
+        $('input, textarea').each(function() { toggleLabel.call(this); });
     });
 
 })(jQuery);
