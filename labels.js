@@ -26,7 +26,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     function toggleLabel() {
         var input = $(this);
         setTimeout(function() {
-            var def = $(input).attr('title');
+            var def = input.attr('title');
             if (!input.val() || (input.val() == def)) {
                 input.prev('span').css('visibility', '');
                 if (def) {
