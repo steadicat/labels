@@ -59,8 +59,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     });
 
     $(function() {
-        $('input, textarea').blur(resetField);
-        $('input, textarea').each(toggleLabel);
+        $('input, textarea').each(function() { toggleLabel.call(this); });
     });
 
 })(jQuery);
