@@ -51,6 +51,13 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     $('input, textarea').live('keydown', toggleLabel);
     $('select').live('change', toggleLabel);
 
+    $('input, textarea').live('focusin', function() {
+        $(this).prev('span').css('color', '#ccc');
+    });
+    $('input, textarea').live('focusout', function() {
+        $(this).prev('span').css('color', '#999');
+    });
+
     $(function() {
         $('input, textarea').blur(resetField);
         $('input, textarea').each(toggleLabel);
