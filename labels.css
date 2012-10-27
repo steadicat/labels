@@ -8,6 +8,7 @@
   color: #999;
   z-index: 1;
   cursor: text;
+  pointer-events: none;
 }
 .input input, .input textarea, .input select {
   z-index: 0;
