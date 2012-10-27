@@ -48,6 +48,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         }
     };
 
+    $('input, textarea').live('cut', toggleLabel);
+
     $('input, textarea').live('keydown', toggleLabel);
     $('input, textarea').live('paste', toggleLabel);
     $('select').live('change', toggleLabel);
