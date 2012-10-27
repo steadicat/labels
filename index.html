@@ -11,8 +11,9 @@
 
     <style type="text/css">
 
-      body { font: 14px/20px sylfaen, garamond, 'urw palladio l', georgia, serif; background: #ddd; color: #000; margin: 2em 20%; }
+      body { font: 16px/20px sylfaen, garamond, 'urw palladio l', georgia, serif; background: #ddd; color: #000; margin: 2em 20%; }
       .input, h1, .tabs { font-family: helvetica, arial, sans-serif; }
+      .input { margin-bottom: 5px; }
       pre { padding: 1em; font-size: 12px; font-family: inconsolata, consolas, monaco, monospace; border: 1em solid #eee; }
       .page { clear: both; overflow: hidden; }
       .loading { background: white url(loader.gif) no-repeat center center; min-height: 20px; }
@@ -44,7 +45,7 @@
 
     <h2><a href="http://attardi.org/">attardi.org</a></h2>
 
-    <h1>Labels <span class="pale">[</span> <a href="http://attardi.org/labels/">behind</a> <span class="pale">|</span> in front of <span class="pale">]</span> form fields</h1>
+    <h1>Labels inside form fields</h1>
 
     <ul class="tabs">
       <li><a href="#info">Info</a></li>
@@ -63,19 +64,9 @@
       <input type="text" />
     </label>
 
-    <p>This version works by placing the label <strong>in front of the input field</strong>, so that the native styling of the control can be preserved. If you prefer, the previous version places labels <a href="http://attardi.org/labels/">behind the input field</a>.</p>
+    <p>The solution is based on simple <a href="#html">HTML markup</a>, some <a href="#css">CSS</a>, and a <a href="#javascript">jQuery plugin</a>. The license is <a href="#javascript">MIT</a>.</p>
 
-    <p>The solution is based on simple HTML markup, some CSS styling, and a jQuery plugin. The license is <a href="#javascript">MIT</a>. Feedback (bugs, suggestions, compatibility reports) on Twitter: @<a href="http://twitter.com/steadicat">steadicat</a>.</p>
-
-    <p>The code is also <a href="http://github.com/steadicat/labels/tree/master">on Github</a>.</p>
-
-    <p>Thanks!</p>
-
-    <h3>Rationale</h3>
-
-    <p>Placing labels inside input fields is a new pattern that, in my user tests, <em>yields better results</em>. This pattern is used consistently, for example, in Facebook and throughout Apple’s products.</p>
-
-    <p>This solution has been harshly criticised, as it is said to confuse users who expect to have to select and delete the instruction text. This is indeed often the case. However, better implementations, such as this one, solve this problem, as well as maintaining accessibility and standards-compatibility.</p>
+    <p>Feedback is welcome on Twitter: @<a href="http://twitter.com/steadicat">steadicat</a>. The code is also <a href="http://github.com/steadicat/labels/">on Github</a>.</p>
 
     </div>
 
