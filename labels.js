@@ -48,16 +48,16 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         }
     };
 
-    $('input, textarea').live('cut', toggleLabel);
+    $(document).on('cut', 'input, textarea', toggleLabel);
 
-    $('input, textarea').live('keydown', toggleLabel);
-    $('input, textarea').live('paste', toggleLabel);
-    $('select').live('change', toggleLabel);
+    $(document).on('keydown', 'input, textarea', toggleLabel);
+    $(document).on('paste', 'input, textarea', toggleLabel);
+    $(document).on('change', 'select', toggleLabel);
 
-    $('input, textarea').live('focusin', function() {
+    $(document).on('focusin', 'input, textarea', function() {
         $(this).prev('span').css('color', '#ccc');
     });
-    $('input, textarea').live('focusout', function() {
+    $(document).on('focusout', 'input, textarea', function() {
         $(this).prev('span').css('color', '#999');
     });
 
