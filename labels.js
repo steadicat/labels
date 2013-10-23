@@ -63,13 +63,13 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
     // set things up as soon as the DOM is ready
     $(function() {
-        $('input, textarea').each(function() { toggleLabel.call(this); });
+        $('input, textarea, select').each(function() { toggleLabel.call(this); });
     });
 
     // do it again to detect Chrome autofill
     $(window).load(function() {
         setTimeout(function() {
-            $('input, textarea').each(function() { toggleLabel.call(this); });
+            $('input, textarea, select').each(function() { toggleLabel.call(this); });
         }, 0);
     });
 
