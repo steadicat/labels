@@ -40,7 +40,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       if (!input.val() || (input.val() == deflt)) {
         span.css('visibility', '');
         if (deflt) {
-          span.css('margin-left', measureWidth(deflt) + 3 + 'px');
+          span.css('margin-left', measureWidth(deflt) + 2 + 'px');
         }
       } else {
         span.css('visibility', 'hidden');

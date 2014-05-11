@@ -1,23 +1,39 @@
-body { font: 16px/20px sylfaen, garamond, 'urw palladio l', georgia, serif; background: #ddd; color: #000; margin: 2em 20%; }
-.input, h1, .tabs { font-family: helvetica, arial, sans-serif; }
-.input { margin-bottom: 5px; }
-pre { padding: 1em; font-size: 12px; font-family: inconsolata, consolas, monaco, monospace; border: 1em solid #eee; }
-.page { clear: both; overflow: hidden; }
-.loading { background: white url(loader.gif) no-repeat center center; min-height: 20px; }
-
-a { text-decoration: none; color: #f33; }
-
-h1 a { color: #999; }
-h1 a:hover { color: #f33; }
-.pale { color: #ccc; }
-
-/* tabs */
-.tabs, .tabs li { margin: 0; padding: 0; display: block; }
-.tabs li a { padding: 5px 20px; margin: 0 2px 0 0; float: left; background: #ccc; text-align: center; }
-.tabs li a:hover { background: #f33; color: #fff; }
-.tabs li.active a, .page { background: #eee; cursor: default; }
-.tabs li.active a:hover { color: #f33; }
-.page { padding: 1em 2em; }
+body {
+  font: 14px/24px 'lato', sans-serif;
+  background: #fff; color: #333;
+  margin: 2em 20%;
+}
+h1 {
+  font: italic 48px/48px 'playfair display', serif;
+}
+h2 {
+  font-size: 14px;
+}
+h3 {
+  font-size: 24px;
+  margin-top: 2em;
+}
+.input {
+  margin-bottom: 12px;
+}
+pre {
+  font: 12px/24px 'source code pro', monospace;
+}
+.code {
+  min-height: 100px;
+}
+.loading {
+  background: white url(loader.gif) no-repeat center center;
+}
+a {
+  text-decoration: none;
+  color: #f33;
+}
 
 /* borders */
-input, textarea, select { border: 1px solid #bbb; border-top-color: #777; border-bottom-color: #ddd; }
+input, textarea, select {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  min-width: 300px;
+  box-sizing: border-box;
+}
