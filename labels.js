@@ -22,56 +22,54 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 */
+
 (function($) {
-    function toggleLabel() {
-        var input = $(this);
-        setTimeout(function() {
-            var def = input.attr('title');
-            if (!input.val() || (input.val() == def)) {
-                input.prev('span').css('visibility', '');
-                if (def) {
-                    var dummy = $('<label></label>').text(def).css('visibility','hidden').appendTo('body');
-                    input.prev('span').css('margin-left', dummy.width() + 3 + 'px');
-                    dummy.remove();
-                }
-            } else {
-                input.prev('span').css('visibility', 'hidden');
-            }
-        }, 0);
-    };
 
-    function resetField() {
-        var def = $(this).attr('title');
-        if (!$(this).val() || ($(this).val() == def)) {
-            $(this).val(def);
-            $(this).prev('span').css('visibility', '');
+  function measureWidth(deflt) {
+    var dummy = $('<label></label>').text(deflt).css('visibility','hidden').appendTo(document.body);
+    var result = dummy.width();
+    dummy.remove();
+    return result;
+  }
+
+  function toggleLabel() {
+    var input = $(this);
+    var deflt = input.attr('title');
+    var span = input.prev('span');
+    setTimeout(function() {
+      if (!input.val() || (input.val() == deflt)) {
+        span.css('visibility', '');
+        if (deflt) {
+          span.css('margin-left', measureWidth(deflt) + 3 + 'px');
         }
-    };
+      } else {
+        span.css('visibility', 'hidden');
+      }
+    }, 0);
+  };
 
-    $(document).on('cut', 'input, textarea', toggleLabel);
+  $(document).on('cut', 'input, textarea', toggleLabel);
+  $(document).on('keydown', 'input, textarea', toggleLabel);
+  $(document).on('paste', 'input, textarea', toggleLabel);
+  $(document).on('change', 'select', toggleLabel);
 
-    $(document).on('keydown', 'input, textarea', toggleLabel);
-    $(document).on('paste', 'input, textarea', toggleLabel);
-    $(document).on('change', 'select', toggleLabel);
+  $(document).on('focusin', 'input, textarea', function() {
+      $(this).prev('span').css('color', '#ccc');
+  });
+  $(document).on('focusout', 'input, textarea', function() {
+      $(this).prev('span').css('color', '#999');
+  });
 
-    $(document).on('focusin', 'input, textarea', function() {
-        $(this).prev('span').css('color', '#ccc');
-    });
-    $(document).on('focusout', 'input, textarea', function() {
-        $(this).prev('span').css('color', '#999');
-    });
+  function init() {
+    $('input, textarea, select').each(toggleLabel);
+  };
 
-    // set things up as soon as the DOM is ready
-    $(function() {
-        $('input, textarea').each(function() { toggleLabel.call(this); });
-    });
+  // Set things up as soon as the DOM is ready.
+  $(init);
 
-    // do it again to detect Chrome autofill
-    $(window).load(function() {
-        setTimeout(function() {
-            $('input, textarea').each(function() { toggleLabel.call(this); });
-        }, 0);
-    });
+  // Do it again to detect Chrome autofill.
+  $(window).load(function() {
+    setTimeout(init, 0);
+  });
 
 })(jQuery);
-

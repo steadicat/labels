@@ -1,43 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <title>Labels in front of form fields (Attardi.org)</title>
 
     <meta name="author" content="Stefano J. Attardi" />
 
-    <style type="text/css">
-
-      body { font: 16px/20px sylfaen, garamond, 'urw palladio l', georgia, serif; background: #ddd; color: #000; margin: 2em 20%; }
-      .input, h1, .tabs { font-family: helvetica, arial, sans-serif; }
-      .input { margin-bottom: 5px; }
-      pre { padding: 1em; font-size: 12px; font-family: inconsolata, consolas, monaco, monospace; border: 1em solid #eee; }
-      .page { clear: both; overflow: hidden; }
-      .loading { background: white url(loader.gif) no-repeat center center; min-height: 20px; }
-
-      a { text-decoration: none; color: #f33; }
-
-      h1 a { color: #999; }
-      h1 a:hover { color: #f33; }
-      .pale { color: #ccc; }
-
-      /* tabs */
-      .tabs, .tabs li { margin: 0; padding: 0; display: block; }
-      .tabs li a { padding: 5px 20px; margin: 0 2px 0 0; float: left; background: #ccc; text-align: center; }
-      .tabs li a:hover { background: #f33; color: #fff; }
-      .tabs li.active a, .page { background: #eee; cursor: default; }
-      .tabs li.active a:hover { color: #f33; }
-      .page { padding: 1em 2em; }
-
-      /* borders */
-      input, textarea, select { border: 1px solid #bbb; border-top-color: #777; border-bottom-color: #ddd; }
-
-    </style>
     <link rel="stylesheet" type="text/css" media="screen,projection" href="labels.css" />
-    <link rel="stylesheet" type="text/css" media="screen,projection" href="shjs.css" />
+    <link rel="stylesheet" type="text/css" media="screen,projection" href="site/site.css" />
+    <link rel="stylesheet" type="text/css" media="screen,projection" href="site/sh/shjs.css" />
 
   </head>
 
@@ -123,30 +95,16 @@
     <pre class="sh_css loading page" id="css"></pre>
     <pre class="sh_javascript loading page" id="javascript"></pre>
 
-    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-    <script type="text/javascript">google.load("jquery", "1");</script>
-    <script type="text/javascript" src="shjs.js"></script>
-    <script type="text/javascript" src="css.js"></script>
-    <script type="text/javascript" src="html.js"></script>
-    <script type="text/javascript" src="javascript.js"></script>
-
-    <script type="text/javascript" src="tabs.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="site/sh/shjs.js"></script>
+    <script type="text/javascript" src="site/sh/css.js"></script>
+    <script type="text/javascript" src="site/sh/html.js"></script>
+    <script type="text/javascript" src="site/sh/javascript.js"></script>
+    <script type="text/javascript" src="site/tabs.js"></script>
+    <script type="text/javascript" src="site/site.js"></script>
 
     <script type="text/javascript" src="labels.js"></script>
 
-    <script type="text/javascript">
-      function done() {
-        $(this).removeClass('loading');
-        sh_highlightDocument();
-      }
-      function jsDone(data) {
-        done.call($('#javascript').text(data)[0]);
-      }
-      $(function() {
-        $.get('labels.js', jsDone);
-        $('#css').load('labels.css', done);
-      });
-    </script>
     <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
     <script type="text/javascript">_uacct = "UA-1809956-1"; urchinTracker();</script>
 

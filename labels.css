@@ -18,5 +18,5 @@
 }
 /* Hack to remove Safari's extra padding. Remove if you don't care about pixel-perfection. */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-    .input input, .input textarea, .input select { padding: 4px; }
+  .input input, .input textarea, .input select { padding: 4px; }
 }

@@ -16,6 +16,4 @@ Placing labels inside input fields is a new pattern that, in my user tests, yiel
 
 This solution has been harshly criticised, as it is said to confuse users who expect to have to select and delete the instruction text. This is indeed often the case. However, better implementations, such as this one, solve this problem, as well as maintaining accessibility and standards-compatibility.
 
-[attardi.org/labels](http://attardi.org/labels)
-
 @[steadicat](http://twitter.com/steadicat)
