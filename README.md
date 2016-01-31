@@ -1,3 +1,7 @@
+## DEPRECATED!
+
+Consider using the [placeholder attribute](http://caniuse.com/#search=placeholder%20attribute) instead. It is now supported by most browsers. You can style it with the [`::placeholder`](http://caniuse.com/#search=%3A%3Aplaceholder) pseudoelement.
+
 ## Introduction
 
 This is one of the best ways to place labels inside input fields.
